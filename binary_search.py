@@ -26,14 +26,20 @@ def find_smallest_positive(xs):
     >>> find_smallest_positive([-3, -2, -1]) is None
     True
     '''
+    
+    if len(xs) == 0:
+        return None
+#sequential
+'''
     counter = 0
     if len(xs) == 0:
-        return False #none? 
+        return False #none?
     if xs[0] == 0:
         return counter
-    else: 
+    else:
         counter += 1
-        return find_smallest_positive(xs[1:])
+        return find_smallest_positive(xs[1:]
+'''
 
 def count_repeats(xs, x):
     '''
