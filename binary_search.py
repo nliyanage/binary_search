@@ -87,7 +87,7 @@ def count_repeats(xs, x):
         mid = (left + right) // 2
         if xs[mid] == x:
             result1 = mid
-            if xs[mid-1] == x and mid != 0:
+            if xs[mid - 1] == x and mid != 0:
                 right = mid - 1
             else:
                 return result1
@@ -108,7 +108,7 @@ def count_repeats(xs, x):
         mid = (left + right) // 2
         if xs[mid] == x:
             result2 = mid
-            if xs[mid+1] == x and ((mid + 1) < len(xs)):
+            if xs[mid + 1] == x and ((mid + 1) < len(xs)):
                 left = mid + 1
             else:
                 return result2
@@ -168,10 +168,10 @@ def argmin(f, lo, hi, epsilon=1e-3):
     -0.00016935087808430278
     '''
     if (hi - lo) < epsilon:
-        return (hi + lo)/2
+        return (hi + lo) / 2
 
-    point1 = lo + (hi - lo)/3
-    point2 = hi - (hi - lo)/3
+    point1 = lo + (hi - lo) / 3
+    point2 = hi - (hi - lo) / 3
     if f(point1) < f(point2):
         return argmin(f, lo, point2, epsilon)
     else:
